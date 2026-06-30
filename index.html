@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reisepläne mit Baby · Südafrika + Bali & Thailand</title>
+<title>Reisepläne mit Baby · Südafrika · Thailand · Bali</title>
 <style>
   :root{
     --ocean:#13657f; --ocean-d:#0e4d61; --ocean-dd:#0a3a49; --sun:#e8743b; --sun-d:#cf5d27;
-    --teal:#10827f; --gold:#e0a92e; --good:#2e8b57; --rain:#3b78b5;
+    --gold:#e0a92e; --good:#2e8b57; --rain:#3b78b5;
     --sand:#f5efe6; --card:#fff; --ink:#26303a; --muted:#6b7884; --line:#e6ddd0;
     --shadow:0 6px 22px rgba(20,50,70,.10); --radius:16px;
   }
@@ -16,7 +16,6 @@
     color:var(--ink);background:var(--sand);line-height:1.55;-webkit-font-smoothing:antialiased}
   a{color:var(--ocean)}a:hover{text-decoration:underline}
   .wrap{max-width:1060px;margin:0 auto;padding:0 18px 70px}
-
   header.hero{background:linear-gradient(135deg,var(--ocean) 0%,var(--ocean-d) 55%,var(--ocean-dd) 100%);
     color:#fff;padding:44px 0 36px;position:relative;overflow:hidden}
   header.hero::after{content:"";position:absolute;right:-50px;bottom:-80px;width:320px;height:320px;
@@ -24,42 +23,32 @@
   .hero-inner{max-width:1060px;margin:0 auto;padding:0 18px;position:relative;z-index:2}
   .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12.5px;opacity:.85;margin:0 0 8px}
   h1{margin:0 0 6px;font-size:clamp(26px,5vw,40px);line-height:1.1;font-weight:800}
-  .sub{font-size:17px;opacity:.95;margin:0 0 4px}
-
-  /* Destination switcher */
-  .destnav{position:sticky;top:0;z-index:20;background:rgba(245,239,230,.92);backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line)}
+  .sub{font-size:17px;opacity:.95;margin:0}
+  .destnav{position:sticky;top:0;z-index:20;background:rgba(245,239,230,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .destnav-inner{max-width:1060px;margin:0 auto;padding:10px 18px;display:flex;gap:10px;flex-wrap:wrap}
-  .dest-tab{cursor:pointer;border:1px solid var(--line);background:#fff;padding:10px 18px;border-radius:999px;
-    font-weight:700;font-size:14.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .dest-tab{cursor:pointer;border:1px solid var(--line);background:#fff;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
   .dest-tab.active{background:var(--ocean);color:#fff;border-color:var(--ocean)}
   .dest-tab small{font-weight:500;opacity:.8}
   .dest-panel{display:none}.dest-panel.active{display:block;animation:fade .25s ease}
   @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
-
   .striptitle{margin:26px 0 2px;font-size:26px;font-weight:800;display:flex;align-items:center;gap:10px}
   .striptitle .flag{font-size:26px}
   .stripsub{color:var(--muted);margin:0 0 6px}
-
   section{margin-top:30px}
   h2{font-size:22px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
   h2 .dot{width:11px;height:11px;border-radius:50%;background:var(--sun);display:inline-block}
   .lead{color:var(--muted);margin:2px 0 16px}
-  .callout{background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);
-    border-radius:12px;padding:15px 18px;box-shadow:var(--shadow);margin-bottom:16px}
-
+  .callout{background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:15px 18px;box-shadow:var(--shadow);margin-bottom:16px}
   .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:13px}
   .fact{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
   .fact .k{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
   .fact .v{font-size:16px;font-weight:700;margin-top:3px;color:var(--ocean-d)}
-
   .season{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .seas{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
   .seas.sun{border-top:4px solid var(--gold)} .seas.rain{border-top:4px solid var(--rain)}
   .seas h3{margin:0 0 4px;font-size:16px;display:flex;align-items:center;gap:8px}
   .tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
   .tag.go{background:#eaf6ee;color:var(--good)} .tag.warn{background:#e8f1fa;color:var(--rain)}
-
   .flights{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .fcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);position:relative}
   .fcard.reco{border:2px solid var(--good)}
@@ -72,27 +61,23 @@
   .pill.night{background:#16263b;color:#fff}.pill.day{background:#fdebd2;color:#9a4d18}.pill.stop{background:#eee;color:#555}.pill.go{background:#eef6f0;color:#2e8b57}
   .note{background:#fff7ef;border:1px solid #f3d9bf;border-radius:12px;padding:11px 14px;font-size:13.5px;margin-top:14px;color:#7a4a22}
   .note.good{background:#eef6f0;border-color:#bfe0cb;color:#246b45}
-
   .timeline{position:relative;margin-left:6px;padding-left:24px;border-left:3px solid var(--sun)}
   .tl{position:relative;margin:0 0 16px}
   .tl::before{content:"";position:absolute;left:-33px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--ocean)}
   .tl .date{font-weight:800;color:var(--ocean-d)}
   .tl .muted{color:var(--muted);font-size:13.5px}
-
   .routes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
   .route{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
   .route.best{border:2px solid var(--gold)}
   .route h3{margin:0 0 6px;font-size:15px}
   .route .when{font-size:11.5px;font-weight:700;color:var(--sun-d);text-transform:uppercase;letter-spacing:.04em}
   .route ol{margin:8px 0 0;padding-left:18px}.route li{margin:3px 0;font-size:13.5px}
-
   .subtabs{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
   .subtab{cursor:pointer;border:1px solid var(--line);background:#fff;padding:8px 15px;border-radius:999px;font-weight:600;font-size:13.5px;color:var(--muted)}
   .subtab.active{background:var(--ocean);color:#fff;border-color:var(--ocean)}
   .subpanel{display:none}.subpanel.active{display:block}
   .area-h{margin:16px 0 10px;font-size:15px;font-weight:800;color:var(--ocean-d);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .area-h span{font-weight:500;color:var(--muted);font-size:13px}
-
   .stays{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
   .stay{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column}
   .stay .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
@@ -104,7 +89,6 @@
   .btn{background:var(--sun);color:#fff;font-weight:700;font-size:13.5px;padding:8px 14px;border-radius:10px;border:none;text-decoration:none}
   .btn:hover{background:var(--sun-d);text-decoration:none}
   .searchlink{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:600}
-
   .calc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
   .calc .row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
   .calc .row:last-of-type{border-bottom:none}
@@ -112,14 +96,12 @@
   .calc input{width:120px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:15px;text-align:right;font-family:inherit}
   .total{display:flex;justify-content:space-between;align-items:center;margin-top:14px;background:var(--ocean);color:#fff;border-radius:12px;padding:14px 18px}
   .total .big{font-size:25px;font-weight:800}
-
   details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:0 16px;box-shadow:var(--shadow)}
   details summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
   details summary::-webkit-details-marker{display:none}
   details summary::after{content:"+";font-size:22px;color:var(--sun);font-weight:700}
   details[open] summary::after{content:"–"}
   details .c{padding:0 0 16px;font-size:14.5px}
-
   footer{margin-top:46px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
   .disclaimer{font-size:12px;color:var(--muted);margin-top:8px}
   @media(max-width:820px){.flights,.season,.routes{grid-template-columns:1fr}}
@@ -130,14 +112,15 @@
   <div class="hero-inner">
     <p class="eyebrow">Workation · Familienreise · 2027</p>
     <h1>Unsere Reisepläne mit Baby 🍼</h1>
-    <p class="sub">Zwei Reisen, eine Seite · ab München · schöne Pool-Unterkünfte, sichere &amp; entspannte Gegenden, Coworking</p>
+    <p class="sub">Drei Reiseziele zur Auswahl · ab München · schöne Pool-Unterkünfte, sichere &amp; entspannte Gegenden, Coworking</p>
   </div>
 </header>
 
 <nav class="destnav">
   <div class="destnav-inner">
     <div class="dest-tab active" data-dest="dest-sa">🌍 Südafrika <small>· Jan/Feb</small></div>
-    <div class="dest-tab" data-dest="dest-bt">🌴 Bali &amp; Thailand <small>· Februar</small></div>
+    <div class="dest-tab" data-dest="dest-th">🇹🇭 Thailand <small>· Februar</small></div>
+    <div class="dest-tab" data-dest="dest-ba">🇮🇩 Bali <small>· Mai–Sep</small></div>
   </div>
 </nav>
 
@@ -246,48 +229,50 @@
     </section>
   </section>
 
-  <!-- ===================== BALI & THAILAND ===================== -->
-  <section class="dest-panel" id="dest-bt">
-    <div class="striptitle"><span class="flag">🌴</span> Bali &amp; Thailand</div>
-    <p class="stripsub">Ausgelegt auf Februar · anpassbar nach Zeitraum · ab München</p>
+  <!-- ===================== THAILAND ===================== -->
+  <section class="dest-panel" id="dest-th">
+    <div class="striptitle"><span class="flag">🇹🇭</span> Thailand</div>
+    <p class="stripsub">Ausgelegt auf Februar (Trockenzeit, ideal) · ~3 Wochen · ab München</p>
 
     <section>
-      <h2><span class="dot"></span>Beste Reisezeit (wichtig für Februar!)</h2>
-      <div class="callout"><b>Kurz gesagt:</b> Im <b>Februar</b> ist <b>Thailand</b> ideal (Trockenzeit, Sonne) – <b>Bali</b> ist im feuchtesten Monat (Regenzeit). Daher für Februar <b>Thailand-Schwerpunkt</b>, Bali als kürzere Zugabe (oder in einen trockenen Monat verschieben).</div>
-      <div class="season">
-        <div class="seas sun"><h3>🇹🇭 Thailand im Februar <span class="tag go">Top</span></h3><div>Trockenzeit: warm 26–33 °C, klarer Himmel, ruhige See. Andamanenküste (Phuket, Krabi) &amp; Golfinseln (Koh Samui) super. Hochsaison.</div></div>
-        <div class="seas rain"><h3>🇮🇩 Bali im Februar <span class="tag warn">Regenzeit</span></h3><div>Feuchtester Monat: 250–300 mm, ~18–22 Regentage (kurze Schauer + Sonne), 27–30 °C, sehr grün, günstiger, weniger Touristen.</div></div>
+      <h2><span class="dot"></span>Beste Reisezeit</h2>
+      <div class="callout"><b>Februar ist ideal:</b> Trockenzeit, warm 26–33 °C, klarer Himmel, ruhige See – Hochsaison. Andamanenküste (Phuket, Krabi) Nov–April, Golfinseln (Koh Samui) Jan–April &amp; Jul–Aug.</div>
+      <div class="facts">
+        <div class="fact"><div class="k">Reisezeit</div><div class="v">Februar (ideal)</div></div>
+        <div class="fact"><div class="k">Dauer</div><div class="v">~3 Wochen</div></div>
+        <div class="fact"><div class="k">Basen</div><div class="v">Bangkok · Insel · Chiang Mai</div></div>
+        <div class="fact"><div class="k">Anreise</div><div class="v">Nonstop möglich ✈️</div></div>
+        <div class="fact"><div class="k">Klima</div><div class="v">Trocken, 26–33°C</div></div>
+        <div class="fact"><div class="k">Visum</div><div class="v">visafrei + TDAC</div></div>
       </div>
-      <p class="lead" style="margin-top:12px">Nach Monat anpassen: <b>Trockenes Bali</b> → Mai–September. <b>Thailand-Andaman</b> → Nov–April. <b>Koh Samui</b> → Jan–April &amp; Jul–Aug.</p>
     </section>
 
     <section>
       <h2><span class="dot"></span>Flüge ab München</h2>
-      <p class="lead">Reale Beispielpreise für ein 3-Wochen-Fenster im Februar (1 Erw., Economy) – schwanken je nach Datum.</p>
       <div class="flights">
         <div class="fcard reco">
-          <span class="reco-tag">★ Einfacher &amp; mit Nachtflug</span>
+          <span class="reco-tag">★ Nonstop &amp; Nachtflug</span>
           <h3>München → Bangkok (BKK)</h3>
           <div class="row2"><span>🌙</span><div><b>Nonstop</b> THAI / Lufthansa · ~10 Std. 35 Min. · spätabends = Nachtflug</div></div>
           <div class="row2"><span>💶</span><div>Nonstop ab ~<b>€900</b> · mit 1 Stopp ab ~<b>€620</b></div></div>
           <div class="price" style="margin-top:6px"><span class="pill night">Nonstop möglich</span><span class="pill day">~10,5 Std.</span></div>
         </div>
         <div class="fcard">
-          <h3>München → Bali (Denpasar, DPS)</h3>
-          <div class="row2"><span>🔁</span><div><b>Kein Direktflug</b> – 1 Stopp (Doha/Dubai/Istanbul/Singapur), ~17–19 Std.</div></div>
-          <div class="row2"><span>💶</span><div>Hin/Rück ab ~<b>€820</b>, typisch <b>€900–1.100</b></div></div>
-          <div class="price" style="margin-top:6px"><span class="pill stop">1 Stopp</span><span class="pill stop">~17–19 Std.</span></div>
+          <h3>Inlandsflüge (günstig &amp; kurz)</h3>
+          <div class="row2"><span>✈️</span><div><b>Bangkok ↔ Phuket / Krabi:</b> ~1 Std. 20 (AirAsia, Thai) · ~€40–80</div></div>
+          <div class="row2"><span>✈️</span><div><b>Bangkok ↔ Chiang Mai:</b> ~1 Std. 15 · ~€40–70</div></div>
+          <div class="note">So lassen sich Insel + Norden bequem verbinden, ohne lange Fahrten mit Baby.</div>
         </div>
       </div>
-      <div class="callout" style="border-left-color:var(--ocean);margin-top:16px"><b>Beides kombinieren?</b> Als „Open-Jaw" – hin nach Bangkok, zurück ab Bali. Innerasiatisch günstig &amp; kurz: <b>Bangkok ↔ Phuket</b> ~1 Std. 20 (~€40–80), <b>Bangkok ↔ Bali</b> ~4 Std. (AirAsia, Thai).</div>
+      <p class="disclaimer">Preise pro Erwachsenem (Economy, Feb-Beispiel, schwanken). Baby &lt;2 J. ~10 % + Steuern.</p>
     </section>
 
     <section>
-      <h2><span class="dot"></span>Routen-Ideen (flexibel)</h2>
+      <h2><span class="dot"></span>Routen-Ideen</h2>
       <div class="routes">
-        <div class="route best"><div class="when">Ideal im Februar</div><h3>🇹🇭 Thailand pur</h3><ol><li>Bangkok 2–3 N</li><li>Phuket / Krabi ~10–12 N (Strand, Pool-Villa)</li><li>Chiang Mai ~5–7 N (Kultur, Coworking)</li></ol></div>
-        <div class="route"><div class="when">Feb möglich, Bali = Regen</div><h3>🇹🇭➕🇮🇩 Kombi</h3><ol><li>~2 Wochen Thailand</li><li>Flug nach Bali (~4 Std.)</li><li>~1,5 Wochen Bali (Ubud + Canggu)</li></ol></div>
-        <div class="route"><div class="when">Eher Mai–Sep</div><h3>🇮🇩 Bali pur</h3><ol><li>Canggu ~10 N (Surf, Coworking)</li><li>Ubud ~7 N (Reisfelder)</li><li>Uluwatu/Sanur ~5 N (Strand)</li></ol></div>
+        <div class="route best"><div class="when">Klassiker</div><h3>Strand + Norden</h3><ol><li>Bangkok 2–3 N</li><li>Phuket / Krabi ~10–12 N (Pool-Villa, Strand)</li><li>Chiang Mai ~5–7 N (Kultur, Coworking)</li></ol></div>
+        <div class="route"><div class="when">Entspannt</div><h3>Insel pur</h3><ol><li>Bangkok 2 N</li><li>Eine Insel ~16–18 N (Phuket/Krabi oder Koh Samui)</li></ol><p class="meta">Wenig Umziehen – ideal mit Baby.</p></div>
+        <div class="route"><div class="when">Workation</div><h3>Chiang Mai lang</h3><ol><li>Bangkok 2–3 N</li><li>Chiang Mai ~2 Wochen (günstig, Coworking)</li><li>Insel-Verlängerung optional</li></ol></div>
       </div>
     </section>
 
@@ -296,10 +281,10 @@
       <p class="lead">Reale Treffer für ein Februar-Fenster (÷13 Nächte = pro Nacht). Mit Baby: überdachter/eingezäunter Pool, AC, Moskitonetz.</p>
       <div class="tabwrap">
         <div class="subtabs">
-          <div class="subtab active" data-target="bt-th">🇹🇭 Thailand</div>
-          <div class="subtab" data-target="bt-ba">🇮🇩 Bali</div>
+          <div class="subtab active" data-target="th-ph">🏝️ Phuket</div>
+          <div class="subtab" data-target="th-cm">⛰️ Chiang Mai</div>
         </div>
-        <div class="subpanel active" id="bt-th">
+        <div class="subpanel active" id="th-ph">
           <div class="area-h">🏝️ Phuket <span>· Andamanenküste, im Feb top · Flughafen + gute Kliniken</span></div>
           <div class="stays">
             <div class="stay"><div class="top"><h4>Waterfront Thai Style Pool Villa (V7)</h4><span class="rate">★ 4,84 (253)</span></div><div class="meta">Privater Pool · am Wasser</div><div class="foot"><div class="ppn">~€92<small>/N</small></div><a class="btn" target="_blank" href="https://www.airbnb.de/rooms/28241620">Ansehen</a></div></div>
@@ -308,6 +293,8 @@
             <div class="stay"><div class="top"><h4>The Retreat · Rawai</h4><span class="rate">★ Value</span></div><div class="meta">Pool · ruhiger Süden · günstig</div><div class="foot"><div class="ppn">~€76<small>/N</small></div><a class="btn" target="_blank" href="https://www.airbnb.de/rooms/1406146552491258761">Ansehen</a></div></div>
           </div>
           <a class="searchlink" target="_blank" href="https://www.airbnb.de/s/Phuket--Thailand/homes?adults=2&infants=1&room_types[]=Entire%20home%2Fapt&amenities[]=7">→ Alle Pool-Villen in Phuket</a>
+        </div>
+        <div class="subpanel" id="th-cm">
           <div class="area-h">⛰️ Chiang Mai <span>· Kultur, Coworking, günstig · ideal für längeres Workation</span></div>
           <div class="stays">
             <div class="stay"><div class="top"><h4>AURA STAY · Luxury Pool Villa</h4><span class="rate">★ 5,0 (7)</span></div><div class="meta">3 SZ · privater Pool</div><div class="foot"><div class="ppn">~€119<small>/N</small></div><a class="btn" target="_blank" href="https://www.airbnb.de/rooms/1614126713352993597">Ansehen</a></div></div>
@@ -316,7 +303,79 @@
           </div>
           <a class="searchlink" target="_blank" href="https://www.airbnb.de/s/Chiang-Mai--Thailand/homes?adults=2&infants=1&room_types[]=Entire%20home%2Fapt&amenities[]=7">→ Alle Pool-Villen in Chiang Mai</a>
         </div>
-        <div class="subpanel" id="bt-ba">
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="dot"></span>Budget-Schätzer · Thailand</h2>
+      <div class="calc" data-calc>
+        <div class="row"><label>Flüge gesamt (2 Erw. + Baby, inkl. Inlandsflug)</label><input data-k="flug" type="number" value="2300"></div>
+        <div class="row"><label>Unterkunft – €/Nacht</label><input data-k="ppn" type="number" value="120"></div>
+        <div class="row"><label>Nächte</label><input data-k="naechte" type="number" value="21"></div>
+        <div class="row"><label>Fahrer / Transfers / Grab</label><input data-k="auto" type="number" value="500"></div>
+        <div class="row"><label>Essen · Aktivitäten · Sonstiges</label><input data-k="extra" type="number" value="1600"></div>
+        <div class="total"><span>Geschätzte Gesamtkosten</span><span class="big sum">–</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="dot"></span>Praktische Tipps</h2>
+      <details open><summary>🦟 Gesundheit (Dengue)</summary><div class="c">Touristengebiete (Inseln, Städte) malariafrei – Malaria nur ländl. Grenz-/Waldregionen. Hauptthema <b>Dengue</b> (Mücken): Baby &gt;2 Mon. babysicheres Repellent (bis 30 % DEET), AC-Zimmer, Moskitonetz. Gute Privatkliniken (Bangkok, Phuket).</div></details>
+      <details><summary>🛂 Visum &amp; 💧 Wasser</summary><div class="c">Deutsche aktuell visumfrei (zuletzt 60 Tage; 2026 Rückkehr auf 30 Tage beschlossen – prüfen), <b>TDAC</b> (digitale Einreisekarte) online Pflicht. Kein Leitungswasser für Babynahrung.</div></details>
+      <details><summary>🕐 Jetlag · 🚗 Fortbewegung · 💻 Coworking</summary><div class="c">~6 Std. Zeitverschiebung – Nachtflug nach Bangkok, erste Tage ruhig. Mit Baby kein Roller – privater Fahrer/Grab, eigene Babyschale. Top-Coworking in Chiang Mai (günstig) &amp; Bangkok; lokale eSIM (AIS/True).</div></details>
+    </section>
+  </section>
+
+  <!-- ===================== BALI ===================== -->
+  <section class="dest-panel" id="dest-ba">
+    <div class="striptitle"><span class="flag">🇮🇩</span> Bali</div>
+    <p class="stripsub">Beste Zeit Mai–September · im Februar Regenzeit · ~3 Wochen · ab München</p>
+
+    <section>
+      <h2><span class="dot"></span>Beste Reisezeit</h2>
+      <div class="callout" style="border-left-color:var(--rain)"><b>Achtung Saison:</b> <b>Februar</b> ist auf Bali die <b>Regenzeit</b> (feuchtester Monat, kurze heftige Schauer + Sonne, sehr grün, günstiger). Für trockenes, sonniges Bali → <b>Mai–September</b>. Im Feb machbar mit Villa mit AC + überdachtem Bereich.</div>
+      <div class="season">
+        <div class="seas sun"><h3>☀️ Mai–September <span class="tag go">ideal</span></h3><div>Trockenzeit: sonnig, ~27–30 °C, weniger Schwüle, beste Strand- &amp; Surfbedingungen.</div></div>
+        <div class="seas rain"><h3>🌧️ Februar <span class="tag warn">Regenzeit</span></h3><div>250–300 mm, ~18–22 Regentage – meist kurze Schauer, dazwischen Sonne. Günstiger, leerer, sehr grün.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="dot"></span>Flüge ab München</h2>
+      <div class="flights">
+        <div class="fcard">
+          <h3>München → Bali (Denpasar, DPS)</h3>
+          <div class="row2"><span>🔁</span><div><b>Kein Direktflug</b> – 1 Stopp (Doha, Dubai, Istanbul, Singapur), ~17–19 Std.</div></div>
+          <div class="row2"><span>💶</span><div>Hin/Rück ab ~<b>€820</b>, typisch <b>€900–1.100</b></div></div>
+          <div class="price" style="margin-top:6px"><span class="pill stop">1 Stopp</span><span class="pill stop">~17–19 Std.</span></div>
+        </div>
+        <div class="fcard">
+          <h3>Vor Ort</h3>
+          <div class="row2"><span>🚗</span><div>Auf Bali bleibt man meist per <b>privatem Fahrer</b> / Roller-Taxi (Gojek/Grab) mobil – kurze Wege zwischen den Basen.</div></div>
+          <div class="row2"><span>🛵</span><div>Mit Baby <b>kein eigener Roller</b> – Fahrer (~€40–50/Tag) ist günstig &amp; bequem.</div></div>
+        </div>
+      </div>
+      <p class="disclaimer">Preise pro Erwachsenem (Economy, Feb-Beispiel, schwanken). Baby &lt;2 J. ~10 % + Steuern.</p>
+    </section>
+
+    <section>
+      <h2><span class="dot"></span>Routen-Idee</h2>
+      <div class="routes">
+        <div class="route best"><div class="when">Klassiker</div><h3>Süden + Mitte</h3><ol><li>Canggu ~10 N (Surf, Cafés, Coworking)</li><li>Ubud ~7 N (Reisfelder, Wellness)</li><li>Uluwatu/Sanur ~5 N (Strand, ruhiger)</li></ol></div>
+        <div class="route"><div class="when">Entspannt</div><h3>Zwei Basen</h3><ol><li>Ubud ~10 N (grün, ruhig)</li><li>Canggu/Sanur ~10 N (Strand)</li></ol><p class="meta">Wenig Umziehen mit Baby.</p></div>
+        <div class="route"><div class="when">Inselhopping</div><h3>+ Nusa / Lombok</h3><ol><li>Bali-Basis ~2 Wochen</li><li>Nusa Lembongan / Gili ~4–5 N (ruhige Inseln)</li></ol></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="dot"></span>Unterkünfte (Pool-Villen, babyfreundlich)</h2>
+      <p class="lead">Reale Treffer für ein Februar-Fenster (÷13 Nächte = pro Nacht). Sehr viel Villa fürs Geld – mit Baby: überdachter/eingezäunter Pool, AC, Moskitonetz.</p>
+      <div class="tabwrap">
+        <div class="subtabs">
+          <div class="subtab active" data-target="ba-ub">🌾 Ubud</div>
+          <div class="subtab" data-target="ba-cg">🏄 Canggu</div>
+        </div>
+        <div class="subpanel active" id="ba-ub">
           <div class="area-h">🌾 Ubud <span>· Reisfelder, Wellness, Dschungel-Pool-Villen</span></div>
           <div class="stays">
             <div class="stay"><div class="top"><h4>Serene Ubud Tropical · Garden Retreat</h4><span class="rate">★ 5,0 (11)</span></div><div class="meta">2 SZ · privater Pool · viel Grün</div><div class="foot"><div class="ppn">~€100<small>/N</small></div><a class="btn" target="_blank" href="https://www.airbnb.de/rooms/1684796072492494394">Ansehen</a></div></div>
@@ -325,6 +384,8 @@
             <div class="stay"><div class="top"><h4>Little Sanctuary · Heart of Ubud</h4><span class="rate">★ Value</span></div><div class="meta">Pool · zentral · günstig</div><div class="foot"><div class="ppn">~€76<small>/N</small></div><a class="btn" target="_blank" href="https://www.airbnb.de/rooms/35449132">Ansehen</a></div></div>
           </div>
           <a class="searchlink" target="_blank" href="https://www.airbnb.de/s/Ubud--Bali--Indonesien/homes?adults=2&infants=1&room_types[]=Entire%20home%2Fapt&amenities[]=7">→ Alle Pool-Villen in Ubud</a>
+        </div>
+        <div class="subpanel" id="ba-cg">
           <div class="area-h">🏄 Canggu <span>· Surf, Cafés, weltbestes Coworking</span></div>
           <div class="stays">
             <div class="stay"><div class="top"><h4>New Radiant Villa · Private Pool</h4><span class="rate">★ 5,0 (8)</span></div><div class="meta">Pererenan · 3 SZ · privater Pool</div><div class="foot"><div class="ppn">~€75<small>/N</small></div><a class="btn" target="_blank" href="https://www.airbnb.de/rooms/1690302191799837849">Ansehen</a></div></div>
@@ -338,22 +399,22 @@
     </section>
 
     <section>
-      <h2><span class="dot"></span>Budget-Schätzer · Bali &amp; Thailand</h2>
+      <h2><span class="dot"></span>Budget-Schätzer · Bali</h2>
       <div class="calc" data-calc>
-        <div class="row"><label>Flüge gesamt (2 Erw. + Baby, inkl. Asien-Hop)</label><input data-k="flug" type="number" value="2400"></div>
-        <div class="row"><label>Unterkunft – €/Nacht</label><input data-k="ppn" type="number" value="120"></div>
-        <div class="row"><label>Nächte</label><input data-k="naechte" type="number" value="24"></div>
-        <div class="row"><label>Fahrer / Transfers / Grab</label><input data-k="auto" type="number" value="700"></div>
-        <div class="row"><label>Essen · Aktivitäten · Sonstiges</label><input data-k="extra" type="number" value="1800"></div>
+        <div class="row"><label>Flüge gesamt (2 Erw. + Baby)</label><input data-k="flug" type="number" value="2500"></div>
+        <div class="row"><label>Unterkunft – €/Nacht</label><input data-k="ppn" type="number" value="110"></div>
+        <div class="row"><label>Nächte</label><input data-k="naechte" type="number" value="21"></div>
+        <div class="row"><label>Fahrer / Transfers / Grab</label><input data-k="auto" type="number" value="600"></div>
+        <div class="row"><label>Essen · Aktivitäten · Sonstiges</label><input data-k="extra" type="number" value="1500"></div>
         <div class="total"><span>Geschätzte Gesamtkosten</span><span class="big sum">–</span></div>
       </div>
     </section>
 
     <section>
       <h2><span class="dot"></span>Praktische Tipps</h2>
-      <details open><summary>🦟 Malaria &amp; Dengue</summary><div class="c">Touristengebiete sind malariafrei (Bali; Thailands Inseln/Städte). Hauptthema <b>Dengue</b> (Mücken, ganzjährig): Baby &gt;2 Mon. babysicheres Repellent (bis 30 % DEET), AC-Zimmer, Moskitonetz, lange helle Kleidung in der Dämmerung.</div></details>
-      <details><summary>💧 Wasser &amp; 🛂 Visum</summary><div class="c">In Bali/Thailand <b>kein Leitungswasser</b> für Babynahrung. <b>Thailand:</b> visumfrei (zuletzt 60 Tage; 2026 Rückkehr auf 30 Tage beschlossen – prüfen), <b>TDAC</b> online Pflicht. <b>Bali/Indonesien:</b> Visa on Arrival (e-VoA) ~€30, 30 Tage.</div></details>
-      <details><summary>🕐 Jetlag · 🚗 Fortbewegung · 💻 Coworking</summary><div class="c">Zeitverschiebung ~6–7 Std. (spürbar) – Nonstop-/Nachtflug nach Bangkok, erste Tage ruhig. Mit Baby <b>kein Roller</b> – privater Fahrer (~€40–60/Tag) oder Grab; eigene Babyschale mitnehmen. Top-Coworking: Canggu, Ubud, Chiang Mai.</div></details>
+      <details open><summary>🦟 Gesundheit (Dengue)</summary><div class="c">Bali ist malariafrei. Hauptthema <b>Dengue</b> (Mücken, in der Regenzeit mehr): Baby &gt;2 Mon. babysicheres Repellent (bis 30 % DEET), AC-Zimmer, Moskitonetz. Gute Kliniken (BIMC, Siloam) im Süden.</div></details>
+      <details><summary>🛂 Visum &amp; 💧 Wasser</summary><div class="c">Visa on Arrival / e-VoA für Deutsche, ~€30, 30 Tage (einmal verlängerbar). <b>Kein Leitungswasser</b> für Babynahrung, Trinken oder Fläschchen-Spülen – nur Flaschenwasser.</div></details>
+      <details><summary>🕐 Jetlag · 💻 Coworking</summary><div class="c">~7 Std. Zeitverschiebung (spürbar) – erste Tage ruhig angehen, viel Tageslicht. Weltklasse-Coworking in Canggu &amp; Ubud (Outpost, B Work, Tropical Nomad); schnelles Fibre, lokale eSIM (Telkomsel).</div></details>
     </section>
   </section>
 
@@ -364,7 +425,6 @@
 </div>
 
 <script>
-  // Destination switcher
   document.querySelectorAll('.dest-tab').forEach(function(t){
     t.addEventListener('click',function(){
       document.querySelectorAll('.dest-tab').forEach(x=>x.classList.remove('active'));
@@ -374,7 +434,6 @@
       window.scrollTo({top:0,behavior:'smooth'});
     });
   });
-  // Scoped sub-tabs
   document.querySelectorAll('.subtab').forEach(function(t){
     t.addEventListener('click',function(){
       var wrap=t.closest('.tabwrap');
@@ -384,7 +443,6 @@
       wrap.querySelector('#'+t.dataset.target).classList.add('active');
     });
   });
-  // Independent budget calculators
   function fmt(n){return '€'+Math.round(n).toLocaleString('de-DE');}
   document.querySelectorAll('[data-calc]').forEach(function(calc){
     var out=calc.querySelector('.sum');
